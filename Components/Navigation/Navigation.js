@@ -7,7 +7,8 @@ import Lien2 from '../Screen/Lien2';
 import Lien3 from '../Screen/Lien3';
 import Lien4 from '../Screen/Lien4';
 import Lien5 from '../Screen/Lien5';
-import Optionsheader from '../Screen/Optionsheader';
+import CameraScreen from '../Screen/CameraScreen';
+
 
 var BottomNavigator = createBottomTabNavigator(
  {
@@ -25,13 +26,8 @@ var StackNavigator = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: () => ({
-      headerStyle: {
-     backgroundColor: '#ecf0f1',
-       },
-       headerTintColor: '#fff',
-       headerTitleStyle: {
-         fontWeight: 'bold',
-       },
+      header: null
+    
     })
 
   },
@@ -73,15 +69,10 @@ var StackNavigator = createStackNavigator({
       header: null
     })
   },
-
-    screen: Optionsheader,
+  Camera:{
+    screen: CameraScreen,
     navigationOptions: () => ({
-      headerStyle: {
-      backgroundColor: '#ecf0f1',
-       },
-       headerTintColor: '#fff',
-       headerTitleStyle: {
-         fontWeight: 'bold'}
+      header: null
     })
   }
 });
